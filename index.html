@@ -4,13 +4,124 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>VetPIMS</title>
+  <script src="socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('http://localhost');
+    socket.on('news', function (data) {
+        console.log(data);
+        socket.emit('my other event', { my: 'data' });
+    });
+  </script>
+  <style>
+
+    #left-container {
+        float: left;
+    }
+
+    #right-container {
+        float: left;
+    }
+
+    .myform {
+        margin-left: 10px;
+        width: 400px;
+        padding: 14px;
+    }
+
+    /* ----------- stylized ----------- */
+    #stylized h1 {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    #stylized p {
+        font-size: 11px;
+        color: #666666;
+        margin-bottom: 20px;
+        border-bottom: solid 1px #b7ddf2;
+        padding-bottom: 10px;
+    }
+
+    #stylized label {
+        display: block;
+        font-weight: bold;
+        text-align: right;
+        width: 140px;
+        float: left;
+    }
+
+    #stylized .small {
+        color: #666666;
+        display: block;
+        font-size: 11px;
+        font-weight: normal;
+        text-align: right;
+        width: 140px;
+    }
+
+    #stylized input {
+        float: left;
+        font-size: 12px;
+        padding: 4px 2px;
+        border: solid 1px #aacfe4;
+        width: 200px;
+        margin: 2px 0 20px 10px;
+    }
+
+    #stylized button {
+        clear: both;
+        margin-left: 150px;
+        width: 125px;
+        height: 31px;
+        background: #666666;
+        text-align: center;
+        line-height: 31px;
+        color: #FFFFFF;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+  </style>
 </head>
 <body>
-  <h1>Sample Links</h1>
-  <ul>
-      <li><a href="users">List users in Mongo</a></li>
-      <li><a href="redis">List redis contents</a></li>
-      <li><a href="health">Health</a></li>
-  </ul>
+
+    <h1>Sample Links</h1>
+
+    <div id="left-container">
+        <ul>
+            <li><a href="users">List users in Mongo</a></li>
+            <li><a href="redis">List redis contents</a></li>
+            <li><a href="health">Health</a></li>
+        </ul>
+    </div>
+
+    <div id="right-container">
+
+        <div id="stylized" class="myform">
+
+            <h1>Comment form</h1>
+            <p>Enter a comment below</p>
+
+            <label>Name
+                <span class="small">Add your name</span>
+            </label>
+            <input type="text" name="name" id="name" />
+
+            <label>Comment
+                <span class="small">Add your comment</span>
+            </label>
+            <input type="textarea" rows="10" cols="50" name="comment" id="comment" />
+
+            <button type="submit">Submit</button>
+
+        </div>
+
+        <div id="data-list">
+            Data List
+        </div>
+
+    </div>
+
 </body>
 </html>

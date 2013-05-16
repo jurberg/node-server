@@ -34,6 +34,10 @@ define(['express', 'fs', 'app/config/urlMappings', 'app/config/config'], functio
 
     },
 
+    getApp: function() {
+      return app;
+    },
+
     listen: function() {
 
       //  And start the app on that interface (and port).

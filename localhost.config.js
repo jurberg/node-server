@@ -12,7 +12,7 @@ define(function() {
       host: 'localhost',
       port: 27017,
       user: 'admin',
-      pwd: 'dqTVqsvPsFss',
+      pwd: 'admin',
       settings: {
         'auto_reconnect': true,
         'poolSize': 5
