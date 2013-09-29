@@ -1,21 +1,19 @@
 {
-  "name": "vetpims",
+  "name": "node-server",
   "version": "0.1.0",
-  "description": "A Veterinary pims to demonstrate large scale JavaScript practices.",
+  "description": "A node server to demonstrate large scale JavaScript practices.",
   "keywords": [
     "OpenShift",
     "Node.js",
     "Require.JS",
     "Redis",
     "MongoDB",
-    "openshift",
-    "Veterinary",
-    "PIMS"
+    "openshift"
   ],
   "author": {
     "name": "jurberg",
     "email": "jurberg@gmail.com",
-    "url":  "https://github.com/jurberg/vetpims"
+    "url":  "https://github.com/jurberg/node-server"
   },
   "engines": {
     "node": ">= 0.8.0",
