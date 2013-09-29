@@ -1,7 +1,7 @@
-vetpims
+node-server
 =======
 
-A simple veterinary application to demonstrate large scale JavaScript development practices.
+Exporation of some node server patterns
 
 Dependencies
 ------------
